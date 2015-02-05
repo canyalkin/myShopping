@@ -1,0 +1,23 @@
+<style type="text/css">
+    .form-signin{
+    	margin-right: 300px;
+		margin-left:  300px;
+    }
+</style>
+<div class="jumbotron">
+   <h1>My Shopping App</h1>
+</div>
+
+<form class="form-signin">
+<h2 class="form-signin-heading">Please sign in</h2>
+<label for="inputEmail" class="sr-only">Email address</label>
+<input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="login.email" required>
+<label for="inputPassword" class="sr-only">Password</label>
+<input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="login.password" required>
+<div class="checkbox">
+    <label>
+        <input type="checkbox" value="remember-me" ng-model="login.rememberMe"> Remember me - {{login.email}}
+    </label>
+</div>
+<button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid" >Sign in</button>
+</form>
